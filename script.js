@@ -10,7 +10,7 @@ const responce_div = document.getElementsByClassName("offset-1 bg-danger p-4 col
 const operation    = ["*","/"];
 const operation1   = ["+","-"];
 let emptyArray     = [];
-let flag           = true;
+let flag           = false;
 let check          = 0;
 let random1        = find_operation(12);
 let b              = 100;
@@ -68,6 +68,7 @@ function find_operation(number){
 
 // let operator1  = operation[random_operator];
 click.addEventListener("click",(e)=>{
+flag = true;
 c = 15;
 let Number          = document.getElementById("number").innerHTML;
 let value1          = document.getElementById("button1").innerHTML;
@@ -123,9 +124,15 @@ location.reload();
 analysis_btn.addEventListener("click",()=>{
 let userResult     = document.getElementById("number").innerHTML;
 let computerResult = a;
-if(userResult==computerResult){
-    document.getElementById("result").innerHTML   = "You Won"
-    document.getElementById("result").style.color =  "green"
+console.log(computerResult);
+console.log(userResult);
+if((userResult==computerResult)&&flag){
+      document.getElementById("result").innerHTML   = "You Won"
+      document.getElementById("result").style.color =  "green"
+}
+else if(flag==false){
+    document.getElementById("result").innerHTML = "you have not played yet";
+    document.getElementById("result").style.color = "brown"
 }
 else
     document.getElementById("result").innerHTML = `You failed by ${computerResult}-${userResult}=${computerResult-userResult}`;
