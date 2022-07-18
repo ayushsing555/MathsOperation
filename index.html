@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url(image.jpg);
+            background-size: cover;
+            backface-visibility: transparent;
+        }
+        .row,.col {
+            border:2px solid rgb(255, 93, 120);
+        }
+        #result{
+            color: red;
+        }
+        .analysis {
+            display:none;
+        }
+        .problem {
+            display: block;
+        }
+        input {
+            border-top:none;
+            border-left:none;
+            border-right:none ;
+        }
+        p{
+            border: 3px solid red;
+            width: 120px;
+            height: auto;
+        }
+    </style>
+</head>
+<style>
+</style>
+<body>
+    <div class="container">
+        <h1 class="m-3 text-center">MathsMatical operation</h1>
+        <button class="btn btn-info Reset">
+            <span>Reset</span>
+        </button>
+        <button class="btn btn-success Instruct">
+            <span>Instruction</span>
+        </button>
+    </div>
+    <div class="container problem">
+        <form class="m-5">
+            <label for="username" name="name">userName-</label>
+            <input type="text" autocomplete="off" id="username">
+        </form>
+        <h6>
+           <b>ramaining time</b> <kbd id="time">time</kbd>
+           <b>ramaining time</b> <kbd id="timeParticular">time</kbd>
+         </h6>
+        <div class="row">
+           <div class="col-6 m-5">
+             <h1>Number</h1>
+              <p>
+                <span id="number">12</span>
+              </p>
+           </div>
+           <div class="col-2 btn-click" style="height: 90px;">
+              <div class="row">
+                <button class="btn operation btn-info    offset-3" value="0" id="button1">
+                    click
+                </button>
+              </div>
+              <div class="row">
+                <button class="btn operation btn-success  offset-6" value="1" id="button2">
+                    click
+                </button>
+            </div>
+           </div>
+           <div class="col-4 align-center">
+            <div class="row">
+              </div>
+              <div class="row">
+                <button class="btn btn-success " id="analysis">
+                    <span>Analysis</span>
+                </button>
+           </div>
+        </div>
+    </div>
+  </div>
+    <div class="container analysis">
+        <h1 class="text-center mb-4 mt-5">📊Analysis📊</h1>
+        <h1>Name:<span id="name" style="color: red;">Ayush singhal</span></h1>
+        <div class="row">
+            <div class="col-4 bg-info p-4 text-black text-center">
+                <h1>⁉ Questions</h1>
+            </div>
+            <div class="offset-1 bg-danger p-4 col-3  text-black text-center">
+                <h3> 😊 Response</h3>
+            </div>
+            <div class="offset-1 bg-success text-black col-3 p-4  text-center">
+                <h1 class="font" >💡Answer</h1>
+            </div>
+        </div>
+        <h2 class=" m-2  "style="text-align:center" id="result">resukt</h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
