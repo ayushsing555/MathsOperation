@@ -1,3 +1,7 @@
+$(document).ready(function(){
+     console.log("ayushay");
+     $(".game").slideDown(2000)
+})
 let responce,number,a=12,maximum_number,d,myAudio2;
 const analysis_div = document.getElementsByClassName("analysis")[0];
 const problem_div  = document.getElementsByClassName("problem")[0];
