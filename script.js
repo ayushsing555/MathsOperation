@@ -6,7 +6,7 @@ let responce,number,a=12,maximum_number,d,myAudio2;
 const analysis_div = document.getElementsByClassName("analysis")[0];
 const problem_div  = document.getElementsByClassName("problem")[0];
 const analysis_btn = document.getElementById("analysis");
-const reset_btn    = document.getElementsByTagName("button")[0];
+const reset_btn    = document.getElementsByTagName("button")[2];
 const click        = document.getElementsByClassName("btn-click")[0];
 const question_div = document.getElementsByClassName("col-4 bg-info p-4 text-black text-center")[0];
 const answer_div   = document.getElementsByClassName("offset-1 bg-success text-black col-3 p-4  text-center")[0];
@@ -19,6 +19,7 @@ let check          = 0;
 let random1        = find_operation(12);
 let b              = 100;
 let c              = 15;
+let playBtn        = document.getElementsByTagName("button")[1];
 const audio1 = new Audio("songs/buttonMusic.wav");
 var myAudio = new Audio("songs/game.wav");
 myAudio.play();
@@ -57,6 +58,12 @@ setInterval(()=>{
             analysis_btn.click();
         }
 },1000)
+playBtn.addEventListener("click",()=>{
+     document.getElementById("inst").style.display="none";
+     location.href="game.html";
+
+
+})
 document.getElementById("button1").innerHTML = random1[0];
 document.getElementById("button2").innerHTML = random1[1];
 function find_operation(number){
