@@ -14,15 +14,16 @@
         *{
             font-family: 'Edu VIC WA NT Beginner', cursive;
         }
+        #text{
+            color: blue;
+            text-shadow: 1px 1px 1px black;
+            font-size: 20px;
+        }
         body{
             font-size: 17px;
             background-image: url(image.jpg);
             background-size: cover;
             backface-visibility: transparent;
-        }
-        button{
-            text-align: center;
-            margin-left: 500px;
         }
     </style>
 </head>
@@ -31,14 +32,16 @@
     <br>
     <div id="inst">
         <div class="container">
-            <button class="btn btn-info Instruction">
+           <div class="row"></div>
+            <button class="btn btn-info Instruction text-center">
+               
                 <span>Instructions</span>
     
             </button>
             <br> <br>
     
         </div>
-        <div class="container">
+        <div class="row" id="text">
             <p><b><b>*</b> This game is related to  Mathematical operations 
                 where you have to reach to the maximum number at last,
                 if you are able to do so you will win the game. <br> <br>
@@ -63,11 +66,16 @@
                 <b>*</b> After the count-down ends or you clicked analysis 
                 button you will be able to analyze your answers. <br>
                 <b>*</b> To start the game again click on reset button </b>
+                <b>*</b>  Remember in divide operation:-  only floor should
+                 be taken otherwise wrong answer may be at the end.<br>
+                <b> For Eg.   15/2 = 2 , 14 / 5 = 2 , 10/3 = 3               
             </p>
+            <div class="row ">
             <br>
-                <button class="btn btn-success">Let's Play</button>
+                <button class="btn btn-success" id="playBtn">Let's Play</button>
+            </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
